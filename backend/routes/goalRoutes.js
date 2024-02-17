@@ -3,8 +3,8 @@ const router = express.Router();
 const {
   getGoals,
   setGoals,
-  updateGoals,
-  deleteGoals,
+  updateGoal,
+  deleteGoal,
 } = require("../controllers/goalController");
 
 // router.get('/',getGoals)
@@ -13,6 +13,6 @@ router.route("/").get(getGoals).post(setGoals);
 
 // router.put('/:id', updateGoals)
 // router.delete('/:id',deleteGoals)
-router.route("/:id").put(updateGoals).delete(deleteGoals);
+router.route("/:id").put(updateGoal).delete(deleteGoal);
 
 module.exports = router;
