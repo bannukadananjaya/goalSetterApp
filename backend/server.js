@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended:false}))
 
 //hadle routes
 app.use('/api/goals',require('./routes/goalRoutes'))
-
+app.use('/api/users',require('./routes/userRoutes'))
 
 app.get('/',(req,res)=>{res.send(`App is working on Port ${port}`)})
 
